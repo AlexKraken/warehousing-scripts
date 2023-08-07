@@ -1,8 +1,8 @@
 class SKULogger:
     """Create a SKU logger.
 
-    This SKU logger can create/open a log file, load any previous SKUs
-    into the program, check if a SKU is already logged, and write new
+    This SKU logger will open a log file, load any previous SKUs
+    into the program, check if a SKU has already been logged, and write new
     SKUs into the log file.
 
     """
@@ -20,6 +20,7 @@ class SKULogger:
     def add(self) -> None:
         with open(self.log_file, "a") as log_writer:
             barcode = input("Scan barcode\n").strip()
+            
             if barcode not in self.sku_log:
                 log_writer.write(barcode + "\n")
                 self.sku_log.add(barcode)
