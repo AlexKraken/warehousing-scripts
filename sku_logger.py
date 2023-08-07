@@ -13,22 +13,19 @@ class SKULogger:
         self.sku_log = set()
 
         # Import the log file
-        try:
-            with open(log_file, "r") as log_reader:
-                for barcode in log_reader:
-                    self.sku_log.add(barcode.strip())
-        except FileNotFoundError:
-            create_new_file = input("File not found, create new file? [y/n]: ")
-            if create_new_file.lower() == "y":
-                open(self.log_file, "a").write("SKUs\n")
-            else:
-                raise FileNotFoundError
+        with open(log_file, "r") as log_reader:
+            for barcode in log_reader:
+                self.sku_log.add(barcode.strip())
 
     def add(self) -> None:
         with open(self.log_file, "a") as log_writer:
             barcode = input("Scan barcode\n").strip()
-            log_writer.write(barcode + "\n")
-            self.sku_log.add(barcode)
+            if barcode not in self.sku_log:
+                log_writer.write(barcode + "\n")
+                self.sku_log.add(barcode)
+                print()
+            else:
+                print("Already entered\n")
 
     def check(self) -> None:
         looping = True
