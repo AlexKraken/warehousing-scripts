@@ -21,6 +21,8 @@ class SKULogger:
             create_new_file = input("File not found, create new file? [y/n]: ")
             if create_new_file.lower() == "y":
                 open(self.log_file, "a").write("SKUs\n")
+            else:
+                raise FileNotFoundError
 
     def add(self) -> None:
         with open(self.log_file, "a") as log_writer:
