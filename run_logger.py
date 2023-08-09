@@ -1,15 +1,15 @@
-from sku_logger import SKULogger
+from sku_logger import BarcodeLogger
 
-log_file = input("Enter log file name: ")
+log_file = input("Enter log file name: ").strip()
 
 try:
-    logger = SKULogger(log_file)
+    logger = BarcodeLogger(log_file)
 except FileNotFoundError:
-    create_new_file = input("File not found, create new file? [y/n]: ")
-    if create_new_file.lower() == "y":
+    create_new_file = input("File not found, create new file? [y/n]: ").strip().lower()
+    if create_new_file == "y":
         with open(log_file, "a") as file:
-            file.write("SKUs\n")
-        logger = SKULogger(log_file)
+            file.write("Barcodes\n")
+        logger = BarcodeLogger(log_file)
     else:
         raise SystemExit("Exiting - check the filename and run again")
 
