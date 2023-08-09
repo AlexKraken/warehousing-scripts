@@ -1,4 +1,4 @@
-from sku_logger import BarcodeLogger
+from barcode_logger import BarcodeLogger
 
 log_file = input("Enter log file name: ").strip()
 
