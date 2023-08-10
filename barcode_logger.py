@@ -1,13 +1,13 @@
 class BarcodeLogger:
     """Create a barcode logger.
 
-    This barcode logger will open a log file, load any previous barcodes 
-    into the program, check if a barcode has already been logged, and write 
+    This barcode logger will open a log file, load any previous barcodes
+    into the program, check if a barcode has already been logged, and write
     new barcodes into the log file.
 
     """
 
-    def __init__(self, log_file: str):
+    def __init__(self, log_file: str) -> None:
         # Use a set to enforce uniqueness
         self.barcode_log = set()
         self.log_file = log_file
@@ -26,11 +26,13 @@ class BarcodeLogger:
                 self.barcode_log.add(barcode)
                 print()
             else:
-                print("Already logged\n")
+                print("ALREADY LOGGED\n")
 
     def check(self) -> None:
         while True:
-            barcode = input("Scan barcode (type in 'exit' when done):\n").strip().lower()
+            barcode = (
+                input("Scan barcode (type in 'exit' when done):\n").strip().lower()
+            )
 
             if barcode == "exit":
                 break
