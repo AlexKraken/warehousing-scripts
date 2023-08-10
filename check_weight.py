@@ -46,5 +46,5 @@ def check() -> None:
     absolute_error, percentage_error = check_weight(expected_weight, measured_weight)
 
     print("-----")
-    print(f"Absolute error:   {absolute_error} lbs")
+    print(f"Absolute error:   {absolute_error:.2f} lbs")
     print(f"Percentage error: {percentage_error:.0f}%")
