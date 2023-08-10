@@ -24,7 +24,7 @@ class BarcodeLogger:
             if barcode not in self.barcode_log:
                 log_writer.write(barcode + "\n")
                 self.barcode_log.add(barcode)
-                print()
+                print("LOG SUCCESSFUL\n")
             else:
                 print("ALREADY LOGGED\n")
 
