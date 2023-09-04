@@ -5,7 +5,7 @@
     >>> check()
 
     Example:
-        Suppose an item's weight is measured to be 0.11 lbs, and the system has the
+        Suppose an item's weight is measured to be 0.1 lbs, and the system has the
         weight as 1 lb. While in Python's interactive shell, run:
 
         >>> check()
@@ -53,8 +53,8 @@ def check_weight(expected_weight: float, measured_weight: float) -> tuple:
 
 
 def check() -> None:
-    """This function basically provides prompts the user for the inputs, allowing quick
-        entry with a numpad, and calls check_weight() and prints the formatted results. 
+    """This function prompts the user for the inputs, allowing for quick entry with a
+        numpad, calls check_weight() and prints the formatted results. 
 
     """
 
