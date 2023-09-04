@@ -1,7 +1,20 @@
-"""This script is meant to be used from Python's interactive shell:
+"""For now, this script is meant to be used from Python's interactive shell
+    to complement the other basic calculations that are commonly used:
 
-    from check_weight import check
-    check()
+    >>> from check_weight import check
+    >>> check()
+
+    Example:
+        Suppose an item's weight is measured to be 0.11 lbs, and the system has the
+        weight as 1 lb. While in Python's interactive shell, run:
+
+        >>> check()
+        Enter the expected weight (in lbs): 1
+        Enter the measured weight (in lbs): 0.1
+        -----
+        Absolute error:   0.90 lbs
+        Percentage error: 900%
+
 """
 
 
@@ -40,6 +53,11 @@ def check_weight(expected_weight: float, measured_weight: float) -> tuple:
 
 
 def check() -> None:
+    """This function basically provides prompts the user for the inputs, allowing quick
+        entry with a numpad, and calls check_weight() and prints the formatted results. 
+
+    """
+
     expected_weight = float(input("Enter the expected weight (in lbs): "))
     measured_weight = float(input("Enter the measured weight (in lbs): "))
 
