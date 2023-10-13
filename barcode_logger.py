@@ -1,5 +1,5 @@
 class BarcodeLogger:
-    """Create a barcode logger.
+    """Create a barcode logger
 
     This barcode logger will open a log file, load any previous barcodes
     into the program, check if a barcode has already been logged, and write
@@ -30,14 +30,12 @@ class BarcodeLogger:
 
     def check(self) -> None:
         while True:
-            barcode = (
-                input("Scan barcode (type in 'exit' when done):\n").strip().lower()
-            )
+            barcode = input("Scan barcode (type in 'exit' when done):\n").strip().lower()
 
             if barcode == "exit":
                 break
 
             if barcode in self.barcode_log:
-                print("PREVIOUSLY FIXED\n")
+                print("BARCODE FOUND\n")
             else:
                 print("NOT FOUND\n")

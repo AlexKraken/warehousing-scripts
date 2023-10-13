@@ -1,3 +1,32 @@
+"""Run the barcode logger
+
+Run from the terminal - when prompted, enter the name of an existing log file 
+to import previously logged barcodes, or enter a name for a new file:
+
+    > python run_logger.py
+    Enter log file name: barcodes.csv
+    File not found, create a new file? [y/n]: y
+
+The program will prompt with options:
+
+    Available commands [add/check/exit]: 
+
+    - - -
+
+    add:
+        Use to add a new barcode to the log. Returns 'LOG SUCCESSFUL' if it was not
+        previously entered, else returns 'ALREADY LOGGED'.
+
+    check:
+        Use to check if a barcode has already been logged. Returns 'BARCODE FOUND'
+        if it was previously entered, else returns 'NOT FOUND'. This will continue
+        prompting for another barcode until the user enters 'exit'.
+
+    exit:
+        Use to exit the program and return to the command line.
+
+"""
+
 from barcode_logger import BarcodeLogger
 
 log_file = input("Enter log file name: ").strip()

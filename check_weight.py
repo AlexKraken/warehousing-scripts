@@ -1,12 +1,12 @@
 """For now, this script is meant to be used from Python's interactive shell
-    to complement the other basic calculations that are commonly used:
+to complement the other basic calculations that are commonly used:
 
     >>> from check_weight import check
     >>> check()
 
-    Example:
-        Suppose an item's weight is measured to be 0.1 lbs, and the system has the
-        weight as 1 lb. While in Python's interactive shell, run:
+Example:
+    Suppose an item's weight is measured to be 0.1 lbs, and the system has the
+    weight as 1 lb. While in Python's interactive shell, run:
 
         >>> check()
         Enter the expected weight (in lbs): 1
@@ -54,7 +54,7 @@ def check_weight(expected_weight: float, measured_weight: float) -> tuple:
 
 def check() -> None:
     """This function prompts the user for the inputs, allowing for quick entry with a
-        numpad, calls check_weight() and prints the formatted results. 
+    numpad, calls check_weight() and prints the formatted results.
 
     """
 
