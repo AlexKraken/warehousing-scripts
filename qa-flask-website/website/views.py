@@ -8,10 +8,6 @@ views = Blueprint("views", __name__)
 
 
 @views.route("/")
-def home():
-    return "<a href='/barcode'>Barcode Logger</a>"
-
-
 @views.route("/barcode", methods=["GET", "POST"])
 def barcode_logger():
     message_found = ""
