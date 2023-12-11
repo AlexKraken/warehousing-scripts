@@ -43,10 +43,10 @@
 <ul class="list-group list-group-flush" id="barcode_list">
     {% for barcode in barcodes %}
         <div class="row">
-            <li class="list-group-item col-4">{{ barcode.barcode }}</li>
+            <li class="list-group-item col-4">{{ barcode.id }}</li>
             <li class="list-group-item col-7 text-truncate" data-toggle="tooltip">{{ barcode.notes }}</li>
             <button type="button" class="btn-close" aria-label="Delete"
-                onclick="deleteBarcode('{{ barcode.barcode }}')"></button>
+                onclick="deleteBarcode('{{ barcode.id }}')"></button>
         </div>
     {% endfor %}
 </ul>

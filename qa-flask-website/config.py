@@ -16,5 +16,5 @@ class Config:
 
     # Database configuration for Flask-SQLAlchemy
     DB_NAME = "barcodes.db"
-    SQLALCHEMY_DATABASE_URI = f"sqlite:///{DB_NAME}"
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL", os.path.join("sqlite:///", DB_NAME))
     SQLALCHEMY_TRACK_MODIFICATIONS = False

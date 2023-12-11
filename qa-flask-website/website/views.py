@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, jsonify, flash, session
 from check_weight import check_weight
+from typing import Optional
 from . import db
 from .models import Barcode
 import json
@@ -7,38 +8,48 @@ import json
 views = Blueprint("views", __name__)
 
 
-@views.route("/")
+def get_all_barcodes() -> list[Barcode]:
+    return Barcode.query.all()
+
+
+def get_barcode_by_id(barcode_id: str) -> Optional[Barcode]:
+    return Barcode.query.get(barcode_id)
+
+
+@views.route("/", methods=["GET", "POST"])
 @views.route("/barcode", methods=["GET", "POST"])
 def barcode_logger():
-    message_found = ""
-    message_added = ""
-    barcode = request.form.get("barcode")
-    barcode_found = None
-    barcodes = Barcode.query
+    message_found: str = ""
+    message_added: str = ""
 
     if request.method == "POST":
+        barcode: str = request.form.get("barcode")
+
         if request.form.get("action") == "check-barcode":
-            barcode_found = Barcode.query.get(barcode)
-            session["barcode"] = request.form.get("barcode")
+            barcode_found: Optional[Barcode] = Barcode.query.get(barcode)
+            session["barcode"]: Optional[str] = request.form.get("barcode")
+
             if barcode_found:
                 message_found = "Barcode found!"
             else:
                 message_found = "Barcode not found!"
 
         elif request.form.get("action") == "add-barcode":
-            barcode_found = Barcode.query.get(session["barcode"])
+            barcode_found: Optional[Barcode] = Barcode.query.get(session["barcode"])
+
             if barcode_found:
                 message_added = "Barcode already added!"
             elif session["barcode"]:
                 notes = request.form.get("notes")
-                new_barcode = Barcode(barcode=session["barcode"], notes=notes)
+                new_barcode = Barcode(id=session["barcode"], notes=notes)
                 message_added = "Barcode added!"
                 db.session.add(new_barcode)
                 db.session.commit()
 
+    barcodes: list[Barcode] = Barcode.query.all()
+
     return render_template(
         "barcode-logger.html",
-        submitted_barcode=barcode,
         message_found=message_found,
         message_added=message_added,
         barcodes=barcodes,
