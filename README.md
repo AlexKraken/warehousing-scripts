@@ -6,7 +6,7 @@
 
 [![QA Website Screen Shot][website-screenshot]](https://github.com/AlexKraken/warehousing-scripts)
 
-These are scripts used to make QA's job a little easier. They started out as scripts to be used from the terminal and Python's interactive shell, but now include a website for those more comfortable with a web browser.
+These are scripts used to make QA's job a little easier. They started out as scripts to be used from the terminal and Python's interactive shell, but now include a website for those more comfortable with a web browser - demo located here: [https://qa-website.sevenwattdinosaur.com/](https://qa-website.sevenwattdinosaur.com/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -15,16 +15,72 @@ These are scripts used to make QA's job a little easier. They started out as scr
 <!-- GETTING STARTED -->
 ## Getting Started
 
- 
-
 ### Prerequisites
-
- 
+You should already have Python installed, check by opening the terminal and running
+```sh
+python
+```
 
 ### Installation
-
- 
-
+1. Clone the repo (or alternatively download as a .zip file) and change to the directory in the terminal
+   ```sh
+   git clone https://github.com/AlexKraken/warehousing-scripts.git
+   cd warehousing-scripts
+   ```
+   
+   
+2. To start the Barcode Logger
+   ```sh
+   python run_logger.py
+   ```
+   
+3. To use the weight checker (will need to be in a seperate terminal if you're already running the Barcode Logger)
+   ```sh
+   > python
+   Python 3.11.3 
+   >>>
+   >>> from check_weight import check
+   >>> check()
+   ```
+   To exit use
+   ```sh
+   >>> exit()
+   ```
+   
+5. To use the website (will also need to be in a seperate terminal)
+   
+   1. Create a python virtual environment
+      ```sh
+      python -m venv venv
+      ```
+      
+   2. Enable the virtual environment
+      ```sh
+      source venv/bin/activate
+      ```
+      
+   3. Install all the required packages
+      ```sh
+      pip install --requirement qa-flask-website/requirements.txt
+      ```
+      
+   4. Start the server for the Flask app
+      ```sh
+      python qa-flask-website/main.py
+      ```
+      
+   5. In the terminal output there should be a line
+      ```sh
+      * Running on http://127.0.0.1:5000
+      ```
+      
+      Enter `http://127.0.0.1:5000` in a web browser to access the website (don't exit out of that terminal!)
+      
+   7. When finished, stop the server by pressing `CRTL + C`, and deactivate the virtual environment by typing
+      ```sh
+      deactivate
+      ```
+      
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
@@ -65,6 +121,9 @@ This allows for quickly checking how far off the system's entry on an item's wei
 
 For now, this script is meant to be used from Python's interactive shell to complement the other calculations that are commonly used:
 
+    > python
+    Python 3.11.3 
+    >>>
     >>> from check_weight import check
     >>> check()
 
@@ -106,14 +165,13 @@ Suppose a case pack of 10 items is measured to be 1.20 lbs but the system expect
 
 A -900% error means the system's expectation is 9 times UNDER the measured weight, which suggests that either the case pack isn't how the item should be sold, or that the previous measurement was made by mistakenly taking an item out of its case pack.
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- ROADMAP -->
 ## Roadmap
-
+For the website version:
 - [ ] Add ability to download barcode log as a .cvs file
 - [ ] Add color highlighting to messages
 - [ ] Add alternating colors to barcode log
@@ -121,13 +179,13 @@ A -900% error means the system's expectation is 9 times UNDER the measured weigh
 
 See the [open issues](https://github.com/AlexKraken/warehousing-scripts/issues) for a full list of proposed features (and known issues).
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- CONTRIBUTING -->
 ## Contributing
-
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
@@ -147,14 +205,10 @@ Don't forget to give the project a star! Thanks again!
 ## Acknowledgments
 
 ### Built With
-
 * [![Flask][Flask]][flask-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 #### Other helpful resources!
-
 * [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
 * [Img Shields](https://shields.io)
 * [Render - Cloud Application Hosting](https://render.com/)
