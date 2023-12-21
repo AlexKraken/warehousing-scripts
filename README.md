@@ -18,7 +18,7 @@ These are scripts used to make QA's job a little easier. They started out as scr
 ### Prerequisites
 You should already have Python installed, check by opening the terminal and running
 ```sh
-python
+python --version
 ```
 
 ### Installation
@@ -47,7 +47,7 @@ python
    >>> exit()
    ```
    
-5. To use the website (will also need to be in a seperate terminal)
+5. To use the website (will also need to be in a seperate terminal and in the `warehousing-scripts` directory)
    
    1. Create a python virtual environment
       ```sh
