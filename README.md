@@ -139,7 +139,7 @@ Suppose an item's weight is measured to be 0.1 lbs, and the system has the weigh
     Percentage error: 900%
 
 
-### The Math
+#### The Math
 For fixing incorrect weights in the system, percentage error is defined as:
 ```math
 \text{Percentage Error} = \frac{{\text{Expected Weight} - \text{Measured Weight}}}{{\text{Measured Weight}}} \times 100\%
