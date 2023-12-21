@@ -1,8 +1,38 @@
-# warehousing-scripts
+<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+<a name="readme-top"></a>
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+
+[![QA Website Screen Shot][website-screenshot]](https://github.com/AlexKraken/warehousing-scripts)
+
 These are scripts used to make QA's job a little easier. They started out as scripts to be used from the terminal and Python's interactive shell, but now include a website for those more comfortable with a web browser.
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Barcode Logger
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+ 
+
+### Prerequisites
+
+ 
+
+### Installation
+
+ 
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+
+### Barcode Logger
 This is useful for quickly checking whether or not a particular item has been logged before. Since any changes to a item's specifications won't be in effect until the next day, this log is useful for catching errors that have already been fixed but will still be flagged until the system updates.
 
 Run from the terminal - when prompted, enter the name of an existing log file to import previously logged barcodes, or enter a name for a new file:
@@ -30,7 +60,7 @@ The program will prompt with options:
         Use to exit the program and return to the command line.
 
 
-## Weight Checker
+### Weight Checker
 This allows for quickly checking how far off the system's entry on an item's weight is from the actual amount. 
 
 For now, this script is meant to be used from Python's interactive shell to complement the other calculations that are commonly used:
@@ -75,3 +105,68 @@ Suppose a case pack of 10 items is measured to be 1.20 lbs but the system expect
 ```
 
 A -900% error means the system's expectation is 9 times UNDER the measured weight, which suggests that either the case pack isn't how the item should be sold, or that the previous measurement was made by mistakenly taking an item out of its case pack.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Add ability to download barcode log as a .cvs file
+- [ ] Add color highlighting to messages
+- [ ] Add alternating colors to barcode log
+- [ ] Add ability to populate 'Barcode Logger' with info from 'Weight Checker'
+
+See the [open issues](https://github.com/AlexKraken/warehousing-scripts/issues) for a full list of proposed features (and known issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
+Don't forget to give the project a star! Thanks again!
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- ACKNOWLEDGMENTS -->
+## Acknowledgments
+
+### Built With
+
+* [![Flask][Flask]][flask-url]
+* [![Bootstrap][Bootstrap.com]][Bootstrap-url]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+#### Other helpful resources!
+
+* [Best-README-Template](https://github.com/othneildrew/Best-README-Template)
+* [Img Shields](https://shields.io)
+* [Render - Cloud Application Hosting](https://render.com/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[flask]: https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white
+[flask-url]: https://flask.palletsprojects.com/
+[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
+[Bootstrap-url]: https://getbootstrap.com
+[website-screenshot]: images/screenshot.png
