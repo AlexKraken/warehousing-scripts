@@ -76,7 +76,7 @@ python
       
       Enter `http://127.0.0.1:5000` in a web browser to access the website (don't exit out of that terminal!)
       
-   7. When finished, stop the server by pressing `CRTL + C`, and deactivate the virtual environment by typing
+   7. When finished, stop the server in the terminal by pressing `CRTL + C`, and deactivate the virtual environment by typing
       ```sh
       deactivate
       ```
