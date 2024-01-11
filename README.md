@@ -6,7 +6,7 @@
 
 [![QA Website Screen Shot][website-screenshot]](https://github.com/AlexKraken/warehousing-scripts)
 
-These are scripts used to make QA's job a little easier. They started out as scripts to be used from the terminal and Python's interactive shell, but now include a website for those more comfortable with a web browser - demo located here: [https://qa-website.sevenwattdinosaur.com/](https://qa-website.sevenwattdinosaur.com/).
+These are scripts used to make QA's job a little easier. They started out as scripts to be used from the terminal and Python's interactive shell, but now include a website for those more comfortable with a web browser - demo (hosted on render.com and takes a minute to spin up) located here: [https://qa-website.sevenwattdinosaur.com/](https://qa-website.sevenwattdinosaur.com/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
