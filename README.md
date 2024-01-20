@@ -51,7 +51,7 @@ python --version
    
    1. Create a python virtual environment
       ```sh
-      python -m venv .venv
+      python -m venv venv
       ```
       
    2. Enable the virtual environment
