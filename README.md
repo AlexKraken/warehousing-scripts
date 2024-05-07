@@ -170,14 +170,14 @@ A -900% error means the system's expectation is 9 times UNDER the measured weigh
 
 
 <!-- ROADMAP -->
-## Roadmap
-For the website version:
-- [ ] Add ability to download barcode log as a .cvs file
-- [ ] Add color highlighting to messages
-- [ ] Add alternating colors to barcode log
-- [ ] Add ability to populate 'Barcode Logger' with info from 'Weight Checker'
+## ~~Roadmap~~
+~~For the website version:~~
+- [ ] ~~Add ability to download barcode log as a .cvs file~~
+- [ ] ~~Add color highlighting to messages~~
+- [ ] ~~Add alternating colors to barcode log~~
+- [ ] ~~Add ability to populate 'Barcode Logger' with info from 'Weight Checker'~~
 
-See the [open issues](https://github.com/AlexKraken/warehousing-scripts/issues) for a full list of proposed features (and known issues).
+~~See the [open issues](https://github.com/AlexKraken/warehousing-scripts/issues) for a full list of proposed features (and known issues).~~
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
