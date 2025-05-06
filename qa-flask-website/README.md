@@ -1,7 +1,7 @@
 # QA Website
 This is a rough draft of a Flask website that provides barcode logging and weight calculations.
 
-A demo can be found at [https://qa-website.sevenwattdinosaur.com/](https://qa-website.sevenwattdinosaur.com/)
+A demo can be found at [https://alexkraken.pythonanywhere.com/](https://alexkraken.pythonanywhere.com/)
 
 ## Barcode Logger
 
